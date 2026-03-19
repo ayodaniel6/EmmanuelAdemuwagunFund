@@ -1,0 +1,307 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0a0a0a;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.05);
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+/* underline hover */
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #00ffd5;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* HERO */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    position: relative;
+}
+
+/* gradient animated background */
+
+.hero-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #00ffd5, #0066ff, #ff00cc);
+    background-size: 300% 300%;
+    animation: gradientMove 10s ease infinite;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    max-width: 500px;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.cta-btn {
+    padding: 12px 25px;
+    border: none;
+    background: #00ffd5;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00ffd5;
+}
+
+/* ABOUT */
+
+.about {
+    padding: 100px 10%;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+}
+
+.about-text {
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.about-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 250px;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.1);
+}
+
+/* IMPACT */
+
+.impact {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.impact-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.impact-box {
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.05);
+    min-width: 200px;
+    transition: 0.3s;
+}
+
+.impact-box:hover {
+    transform: scale(1.05);
+    background: rgba(0,255,213,0.1);
+}
+
+.impact-box h3 {
+    font-size: 2rem;
+    color: #00ffd5;
+}
+
+/* ARTICLES */
+
+.articles {
+    padding: 100px 10%;
+}
+
+.article-list {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+article {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.05);
+    transition: 0.3s;
+}
+
+article:hover {
+    transform: translateY(-10px);
+}
+
+article a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #00ffd5;
+    text-decoration: none;
+}
+
+/* DONATION */
+
+.donation {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.donation-content {
+    padding: 50px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(0,255,213,0.2), rgba(0,102,255,0.2));
+}
+
+.donate-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    background: #fff;
+    color: #000;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.donate-btn:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: #000;
+    color: #aaa;
+}
+
+/* MOBILE */
+
+@media(max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Reveal animation base */
+
+.card, .impact-box, article, .donation-content {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+/* When visible */
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile menu active */
+
+.menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 40px;
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+}
