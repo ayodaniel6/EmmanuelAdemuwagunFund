@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ademuwagun Foundation – Building Futures. Empowering Minds.</title>
+  <title>Emmanuel Ademuwagun</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="images/ea-logo.svg" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
@@ -13,23 +14,17 @@
   <!-- ===== NAVIGATION ===== -->
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
-      <a href="#" class="logo">
-        <span class="logo-icon">🎓</span>
-        <span class="logo-text">
-          <span class="logo-line1">Emmanuel</span>
-          <span class="logo-line2">Ademuwagun</span>
-          <span class="logo-line3">Foundation</span>
-        </span>
+      <a href="#home" class="nav-logo">
+        <img src="images/ea-logo.svg" alt="EA" class="nav-logo-img" />
+        <span class="nav-logo-name">Engr. Emmanuel Ademuwagun</span>
       </a>
       <nav class="nav-links" id="nav-links">
         <a href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#programs">Programs</a>
-        <a href="#impact">Impact</a>
-        <a href="#articles">Blog</a>
+        <a href="#foundation" class="nav-foundation-tab">Foundation</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a href="#donate" class="btn btn-primary nav-cta">Get Involved</a>
+      <a href="#contact" class="btn btn-primary nav-cta">Get In Touch</a>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -40,26 +35,25 @@
   <div class="mobile-menu" id="mobile-menu">
     <a href="#home" class="mobile-link">Home</a>
     <a href="#about" class="mobile-link">About</a>
-    <a href="#programs" class="mobile-link">Programs</a>
-    <a href="#impact" class="mobile-link">Impact</a>
-    <a href="#articles" class="mobile-link">Blog</a>
+    <a href="#foundation" class="mobile-link mobile-link-foundation">Foundation</a>
     <a href="#contact" class="mobile-link">Contact</a>
-    <a href="#donate" class="btn btn-primary">Get Involved</a>
+    <a href="#contact" class="btn btn-primary">Get In Touch</a>
   </div>
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="home">
     <div class="hero-bg">
-      <img src="images/Emmanuel_ademuwagun_bill_gates.jpg" alt="Emmanuel Ademuwagun" class="hero-img" />
+      <img src="images/homepage/Emmanuel_ademuwagun_bill_gates.jpg" alt="Emmanuel Ademuwagun" class="hero-img hero-slide active" />
+      <img src="images/homepage/emmanuel-ademuwagun-daikin.jpg" alt="Emmanuel Ademuwagun" class="hero-img hero-slide" />
+      <img src="images/homepage/emmanuel-ademuwagun-diana-global-entrepreneurship-summit.jpg" alt="Emmanuel Ademuwagun" class="hero-img hero-slide" />
       <div class="hero-overlay"></div>
     </div>
     <div class="container hero-content">
-      <span class="hero-badge">Transforming Lives Since 2025</span>
-      <h1 class="hero-title">Building Futures.<br />Empowering Minds.</h1>
-      <p class="hero-sub">We support Nigerian students with world-class academic excellence programs focused on WAEC, NECO &amp; JAMB success — giving every child the future they deserve.</p>
+      <h1 class="hero-title">Engineer. Inventor.<br />AI &times; Cleantech.</h1>
+      <p class="hero-sub">Decades of experience in Industrial Control Systems delivering innovative energy solutions across complex industrial environments. Now applying AI to drive scalable, sustainable impact in Cleantech.</p>
       <div class="hero-actions">
-        <a href="#donate" class="btn btn-primary btn-lg">Donate Now</a>
-        <a href="#about" class="btn btn-outline btn-lg">Our Story</a>
+        <a href="#about" class="btn btn-primary btn-lg">About Me</a>
+        <a href="#foundation" class="btn btn-outline btn-lg">The Foundation</a>
       </div>
       <div class="hero-scroll">
         <span>Scroll</span>
@@ -75,217 +69,81 @@
         <img src="images/emmanuel.jpg" alt="Emmanuel Ademuwagun" class="about-photo" />
         <div class="about-badge">
           <span class="about-badge-num">10+</span>
-          <span class="about-badge-label">Years of Impact</span>
+          <span class="about-badge-label">Years Experience</span>
         </div>
       </div>
       <div class="about-text">
         <span class="section-tag">Meet Emmanuel</span>
-        <h2 class="section-title">A Vision Born from Purpose</h2>
-        <p>I am <strong>Emmanuel Ademuwagun</strong>, founder of this foundation. Growing up, I witnessed firsthand the barriers that talented Nigerian students face in achieving academic excellence — limited resources, lack of mentorship, and poor exam preparation.</p>
-        <p>That experience lit a fire in me. The Ademuwagun Foundation was born to close that gap — providing structured learning programs, mentorship from experienced educators, and the tools every student needs to pass WAEC, NECO, and JAMB with distinction.</p>
-        <p>We believe every child deserves a shot at a great future, regardless of their background.</p>
+        <h2 class="section-title">Engineer. Inventor. Leader.</h2>
+        <p>I am <strong>Emmanuel Ademuwagun</strong> — an Electrical Engineer and Inventor with decades of experience in Industrial Control Systems, delivering innovative energy solutions across complex industrial environments.</p>
+        <p>I provided strategic engineering and technology leadership at <strong>Arnergy</strong>, a Bill Gates–backed cleantech scale-up in Africa, and contributed to global organisations including <strong>Coca-Cola HBC</strong> and <strong>Diageo</strong>. I currently serve as Lead of Control Systems Engineering at <strong>Redlen Technologies</strong> in Victoria, BC — a Canon Inc. company acquired for $430M.</p>
+        <p>I am now focused on applying AI to Cleantech to drive scalable, sustainable impact — and recognised by SolarQuarter as a <strong>Top 40 Under 40</strong> leader in the Middle East &amp; Africa.</p>
         <div class="about-pillars">
           <div class="pillar">
-            <i class="fa fa-book-open"></i>
-            <span>Education</span>
+            <i class="fa fa-bolt"></i>
+            <span>Control Systems</span>
           </div>
           <div class="pillar">
-            <i class="fa fa-hands-holding-child"></i>
-            <span>Mentorship</span>
+            <i class="fa fa-solar-panel"></i>
+            <span>Cleantech</span>
           </div>
           <div class="pillar">
-            <i class="fa fa-rocket"></i>
-            <span>Opportunity</span>
+            <i class="fa fa-brain"></i>
+            <span>AI &amp; Innovation</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== PROGRAMS ===== -->
-  <section class="programs section bg-light" id="programs">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">What We Do</span>
-        <h2 class="section-title">Our Programs</h2>
-        <p class="section-desc">Comprehensive support across the subjects and skills that matter most for exam success and lifelong achievement.</p>
-      </div>
-      <div class="programs-grid">
-        <div class="program-card">
-          <div class="program-icon">📐</div>
-          <h3>Mathematics Mastery</h3>
-          <p>Breaking down complex topics into simple, digestible lessons. From algebra to calculus, we make maths accessible for every student.</p>
-          <a href="#" class="card-link">Learn more <i class="fa fa-arrow-right"></i></a>
-        </div>
-        <div class="program-card">
-          <div class="program-icon">📝</div>
-          <h3>English Excellence</h3>
-          <p>Developing reading comprehension, essay writing, and grammar skills to help students excel in English Language and Literature exams.</p>
-          <a href="#" class="card-link">Learn more <i class="fa fa-arrow-right"></i></a>
-        </div>
-        <div class="program-card">
-          <div class="program-icon">⚗️</div>
-          <h3>Science Foundations</h3>
-          <p>Hands-on Physics and Chemistry preparation with practical demonstrations, past question analysis, and targeted revision sessions.</p>
-          <a href="#" class="card-link">Learn more <i class="fa fa-arrow-right"></i></a>
-        </div>
-        <div class="program-card">
-          <div class="program-icon">🧭</div>
-          <h3>JAMB Strategy</h3>
-          <p>Purpose-built JAMB preparation covering CBT practice, time management strategies, and subject-specific drills for top UTME scores.</p>
-          <a href="#" class="card-link">Learn more <i class="fa fa-arrow-right"></i></a>
-        </div>
-        <div class="program-card">
-          <div class="program-icon">🤝</div>
-          <h3>Mentorship Network</h3>
-          <p>One-on-one and group mentorship from experienced educators, graduates, and professionals who guide students beyond the classroom.</p>
-          <a href="#" class="card-link">Learn more <i class="fa fa-arrow-right"></i></a>
-        </div>
-        <div class="program-card">
-          <div class="program-icon">🌱</div>
-          <h3>Career Pathways</h3>
-          <p>Connecting students to scholarships, internships, and career opportunities that open doors long after exam season ends.</p>
-          <a href="#" class="card-link">Learn more <i class="fa fa-arrow-right"></i></a>
-        </div>
-      </div>
+  <!-- ===== FOUNDATION ===== -->
+  <section class="foundation-section section" id="foundation">
+    <div class="foundation-bg">
+      <img src="images/emmanuel-ademuwagun-with-engineers.png" alt="" class="foundation-bg-img" />
+      <div class="foundation-overlay"></div>
     </div>
-  </section>
-
-  <!-- ===== IMPACT ===== -->
-  <section class="impact section" id="impact">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Our Impact</span>
-        <h2 class="section-title">Numbers That Tell the Story</h2>
-        <p class="section-desc">Every number represents a real student whose life has been changed by access to quality education and mentorship.</p>
+
+      <!-- Logo + intro -->
+      <div class="foundation-header">
+        <div class="foundation-logo-wrap">
+          <img src="images/emmanuel-ademuwagun-foundation.png" alt="Emmanuel Ademuwagun Foundation Logo" class="foundation-logo" />
+        </div>
+        <div class="foundation-intro">
+          <span class="section-tag light">Emmanuel Ademuwagun Foundation</span>
+          <h2 class="section-title light">Empowering the Next Generation<br />of African Innovators.</h2>
+          <p class="section-desc light">Through STEM education, the Emmanuel Ademuwagun Foundation supports students in need — providing structured learning, mentorship, and funding to help them succeed in WASSCE, JAMB, NECO, and Vocational Education.</p>
+        </div>
       </div>
+
+      <!-- Annual commitment banner -->
+      <div class="commitment-banner">
+        <div class="commitment-icon"><i class="fa fa-hand-holding-heart"></i></div>
+        <div class="commitment-text">
+          <span class="commitment-amount">₦1,500,000</span>
+          <span class="commitment-label">Annual commitment to supporting STEM in Nigeria through WASSCE, JAMB, NECO, and Vocational Education for students in need of funding</span>
+        </div>
+      </div>
+
+      <!-- Impact stats -->
       <div class="stats-grid">
         <div class="stat-card">
           <div class="stat-icon"><i class="fa fa-user-graduate"></i></div>
-          <div class="stat-num" data-target="120">0</div>
+          <div class="stat-num" data-target="3" data-suffix="+">0</div>
           <div class="stat-label">Students Sponsored</div>
         </div>
         <div class="stat-card">
-          <div class="stat-icon"><i class="fa fa-trophy"></i></div>
-          <div class="stat-num" data-target="95" data-suffix="%">0</div>
-          <div class="stat-label">Exam Success Rate</div>
-        </div>
-        <div class="stat-card">
           <div class="stat-icon"><i class="fa fa-school"></i></div>
-          <div class="stat-num" data-target="10" data-suffix="+">0</div>
+          <div class="stat-num" data-target="2" data-suffix="+">0</div>
           <div class="stat-label">Partner Schools</div>
         </div>
         <div class="stat-card">
           <div class="stat-icon"><i class="fa fa-heart"></i></div>
-          <div class="stat-num" data-target="500" data-suffix="+">0</div>
+          <div class="stat-num" data-target="10" data-suffix="+">0</div>
           <div class="stat-label">Lives Touched</div>
         </div>
       </div>
 
-      <!-- Testimonials -->
-      <div class="testimonials">
-        <h3 class="testimonials-title">What Our Students Say</h3>
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <div class="testimonial-avatar">AD</div>
-            <p class="testimonial-quote">"The foundation's JAMB preparation program helped me score 312. I couldn't have done it without this mentorship."</p>
-            <div class="testimonial-name">Adesola D.</div>
-            <div class="testimonial-role">JAMB 2025 Scholar</div>
-          </div>
-          <div class="testimonial-card">
-            <div class="testimonial-avatar">EB</div>
-            <p class="testimonial-quote">"From failing Mathematics to acing WAEC with a B2 — the structured lessons here changed everything for me."</p>
-            <div class="testimonial-name">Emeka B.</div>
-            <div class="testimonial-role">WAEC 2025 Graduate</div>
-          </div>
-          <div class="testimonial-card">
-            <div class="testimonial-avatar">FK</div>
-            <p class="testimonial-quote">"I received a full scholarship referral through this program. Emmanuel's foundation opened doors I never imagined."</p>
-            <div class="testimonial-name">Fatima K.</div>
-            <div class="testimonial-role">University Scholar, 2025</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== ARTICLES ===== -->
-  <section class="articles section bg-light" id="articles">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">From the Blog</span>
-        <h2 class="section-title">Resources &amp; Insights</h2>
-        <p class="section-desc">Expert tips, study guides, and exam strategies written to help every student perform at their best.</p>
-      </div>
-      <div class="articles-grid">
-        <article class="article-card featured">
-          <div class="article-img-wrap">
-            <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800&q=80" alt="WAEC Preparation" />
-            <span class="article-tag">WAEC</span>
-          </div>
-          <div class="article-body">
-            <span class="article-date"><i class="fa fa-calendar"></i> June 1, 2026</span>
-            <h3>How to Prepare for WAEC Effectively</h3>
-            <p>A step-by-step study strategy guide covering past questions, time management, and the mindset shifts that separate A students from the rest.</p>
-            <a href="#" class="card-link">Read article <i class="fa fa-arrow-right"></i></a>
-          </div>
-        </article>
-        <article class="article-card">
-          <div class="article-img-wrap">
-            <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?w=600&q=80" alt="Mathematics" />
-            <span class="article-tag">Mathematics</span>
-          </div>
-          <div class="article-body">
-            <span class="article-date"><i class="fa fa-calendar"></i> May 18, 2026</span>
-            <h3>Mastering Mathematics in 30 Days</h3>
-            <p>A focused sprint plan that simplifies the most complex topics and builds confidence through daily practice and progressive challenges.</p>
-            <a href="#" class="card-link">Read article <i class="fa fa-arrow-right"></i></a>
-          </div>
-        </article>
-        <article class="article-card">
-          <div class="article-img-wrap">
-            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&q=80" alt="JAMB Tips" />
-            <span class="article-tag">JAMB</span>
-          </div>
-          <div class="article-body">
-            <span class="article-date"><i class="fa fa-calendar"></i> May 5, 2026</span>
-            <h3>Top JAMB Tips for 2026</h3>
-            <p>Proven CBT techniques, subject scoring patterns, and time management tactics to help you hit 300+ on your UTME this year.</p>
-            <a href="#" class="card-link">Read article <i class="fa fa-arrow-right"></i></a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== DONATE ===== -->
-  <section class="donate section" id="donate">
-    <div class="donate-bg">
-      <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1600&q=80" alt="Students" class="donate-img" />
-      <div class="donate-overlay"></div>
-    </div>
-    <div class="container donate-content">
-      <span class="section-tag light">Support the Mission</span>
-      <h2 class="section-title light">Your Gift Changes a Life</h2>
-      <p class="section-desc light">Every contribution — no matter the size — provides a student with study materials, mentorship, and the chance to pass their exams and build a better future.</p>
-      <div class="donate-amounts">
-        <button class="amount-btn" data-amount="2000">₦2,000</button>
-        <button class="amount-btn active" data-amount="5000">₦5,000</button>
-        <button class="amount-btn" data-amount="10000">₦10,000</button>
-        <button class="amount-btn" data-amount="25000">₦25,000</button>
-      </div>
-      <div class="donate-form">
-        <input type="text" placeholder="Your full name" class="donate-input" />
-        <input type="email" placeholder="Your email address" class="donate-input" />
-        <select class="donate-input">
-          <option value="">Donation purpose</option>
-          <option>Exam Preparation Materials</option>
-          <option>Student Sponsorship</option>
-          <option>Mentorship Program</option>
-          <option>General Support</option>
-        </select>
-        <button class="btn btn-primary btn-lg donate-btn">Donate ₦5,000 Now</button>
-      </div>
     </div>
   </section>
 
@@ -295,36 +153,35 @@
       <div class="contact-info">
         <span class="section-tag">Get In Touch</span>
         <h2 class="section-title">Let's Talk</h2>
-        <p>Whether you're a student seeking help, a school looking to partner, or a donor wanting to make an impact — we'd love to hear from you.</p>
+        <p>Whether you're exploring a collaboration, a partnership in Cleantech or AI, or simply want to connect — I'd love to hear from you.</p>
         <div class="contact-details">
           <div class="contact-item">
             <i class="fa fa-envelope"></i>
-            <span>hello@emmanuelademuwagun.org</span>
+            <span>founder@emmanuelademuwagun.org</span>
           </div>
           <div class="contact-item">
             <i class="fa fa-phone"></i>
-            <span>+234 800 000 0000</span>
+            <span>+1 905 922 6245</span>
           </div>
           <div class="contact-item">
             <i class="fa fa-map-marker-alt"></i>
-            <span>Nigeria</span>
+            <span>Victoria, BC, Canada</span>
           </div>
-        </div>
-        <div class="social-links">
-          <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
-          <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
       <form class="contact-form" id="contact-form">
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+        <input type="hidden" name="subject" value="New message from emmanuelademuwagun.org" />
+        <input type="hidden" name="from_name" value="Emmanuel Ademuwagun Website" />
+        <input type="checkbox" name="botcheck" style="display:none" />
         <div class="form-row">
-          <input type="text" placeholder="Your name" class="form-input" required />
-          <input type="email" placeholder="Email address" class="form-input" required />
+          <input type="text" name="name" placeholder="Your name" class="form-input" required />
+          <input type="email" name="email" placeholder="Email address" class="form-input" required />
         </div>
-        <input type="text" placeholder="Subject" class="form-input" />
-        <textarea placeholder="Your message..." class="form-input form-textarea" rows="5" required></textarea>
+        <input type="text" name="subject_line" placeholder="Subject" class="form-input" />
+        <textarea name="message" placeholder="Your message..." class="form-input form-textarea" rows="5" required></textarea>
         <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+        <p class="form-status" id="form-status"></p>
       </form>
     </div>
   </section>
@@ -333,48 +190,37 @@
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <div class="logo">
-          <span class="logo-icon">🎓</span>
-          <span class="logo-text">
-            <span class="logo-line1">Emmanuel</span>
-            <span class="logo-line2">Ademuwagun</span>
-            <span class="logo-line3">Foundation</span>
-          </span>
-        </div>
-        <p>Empowering Nigerian students through education, mentorship, and opportunity since 2025.</p>
+        <h3 class="footer-name">Emmanuel Ademuwagun</h3>
+        <p>Electrical Engineer &amp; Inventor | AI × Cleantech | SolarQuarter Top 40 Under 40, the Middle East &amp; Africa.</p>
         <div class="social-links">
           <a href="#" class="social-btn sm" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
           <a href="#" class="social-btn sm" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           <a href="#" class="social-btn sm" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social-btn sm" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.linkedin.com/in/emmanuel-ademuwagun/" target="_blank" class="social-btn sm" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
       <div class="footer-col">
-        <h4>Quick Links</h4>
+        <h4>Navigation</h4>
         <a href="#home">Home</a>
-        <a href="#about">About Emmanuel</a>
-        <a href="#programs">Our Programs</a>
-        <a href="#impact">Impact</a>
-        <a href="#articles">Blog</a>
+        <a href="#about">About</a>
+        <a href="#foundation">Foundation</a>
+        <a href="#contact">Contact</a>
       </div>
       <div class="footer-col">
-        <h4>Get Involved</h4>
-        <a href="#donate">Donate</a>
-        <a href="#contact">Volunteer</a>
-        <a href="#contact">Partner With Us</a>
-        <a href="#contact">Apply for Support</a>
-      </div>
-      <div class="footer-col">
-        <h4>Newsletter</h4>
-        <p>Get the latest exam tips and foundation updates delivered to your inbox.</p>
-        <div class="newsletter-form">
-          <input type="email" placeholder="Your email" class="newsletter-input" />
-          <button class="btn btn-primary">Subscribe</button>
-        </div>
+        <h4>Get In Touch</h4>
+        <a href="mailto:founder@emmanuelademuwagun.org" class="footer-contact-item">
+          <i class="fa fa-envelope"></i> founder@emmanuelademuwagun.org
+        </a>
+        <a href="tel:+19059226245" class="footer-contact-item">
+          <i class="fa fa-phone"></i> +1 905 922 6245
+        </a>
+        <span class="footer-contact-item">
+          <i class="fa fa-map-marker-alt"></i> Victoria, BC, Canada
+        </span>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Ademuwagun Foundation. All Rights Reserved.</p>
+      <p>© 2026 Emmanuel Ademuwagun Foundation. All Rights Reserved.</p>
       <div class="footer-legal">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Use</a>

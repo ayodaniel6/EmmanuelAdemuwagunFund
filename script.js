@@ -1,3 +1,14 @@
+// ===== HERO SLIDESHOW =====
+const slides = document.querySelectorAll('.hero-slide');
+let currentSlide = 0;
+if (slides.length > 1) {
+  setInterval(() => {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }, 5000);
+}
+
 // ===== NAVBAR SCROLL =====
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
@@ -77,16 +88,45 @@ amountBtns.forEach(btn => {
 // ===== CONTACT FORM =====
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = contactForm.querySelector('button[type="submit"]');
-    btn.textContent = 'Message Sent! ✓';
-    btn.style.background = '#16a34a';
+    const status = document.getElementById('form-status');
+
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    const data = new FormData(contactForm);
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      });
+      const json = await res.json();
+
+      if (json.success) {
+        btn.textContent = 'Message Sent ✓';
+        btn.style.background = '#16a34a';
+        status.textContent = 'Thank you! I\'ll be in touch soon.';
+        status.style.color = '#16a34a';
+        contactForm.reset();
+      } else {
+        throw new Error(json.message);
+      }
+    } catch (err) {
+      btn.textContent = 'Send Message';
+      btn.disabled = false;
+      status.textContent = 'Something went wrong. Please email founder@emmanuelademuwagun.org directly.';
+      status.style.color = '#dc2626';
+    }
+
     setTimeout(() => {
       btn.textContent = 'Send Message';
       btn.style.background = '';
-      contactForm.reset();
-    }, 3000);
+      btn.disabled = false;
+      status.textContent = '';
+    }, 5000);
   });
 }
 
