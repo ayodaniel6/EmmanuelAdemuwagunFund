@@ -1,3 +1,6 @@
+// ===== FIX MOBILE VIEWPORT HEIGHT (prevents shaky hero on scroll) =====
+document.documentElement.style.setProperty('--vh', window.innerHeight * 0.01 + 'px');
+
 // ===== HERO SLIDESHOW =====
 const slides = document.querySelectorAll('.hero-slide');
 let currentSlide = 0;
