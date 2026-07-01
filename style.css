@@ -353,6 +353,7 @@ a { text-decoration: none; color: inherit; }
   max-width: 560px;
 }
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 60px; }
+.hero-actions .btn { width: 192px; text-align: center; justify-content: center; }
 .hero-scroll {
   display: flex;
   align-items: center;
@@ -816,6 +817,80 @@ a { text-decoration: none; color: inherit; }
   color: rgba(255,255,255,0.85);
   text-align: center;
 }
+
+/* ===== CREDENTIALS ===== */
+.credentials-header { text-align: center; margin-bottom: 48px; }
+.cred-group { margin-bottom: 48px; }
+.cred-group-title {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--navy);
+  border-left: 3px solid var(--teal);
+  padding-left: 12px;
+  margin-bottom: 20px;
+}
+.cred-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.cred-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  transition: box-shadow var(--transition);
+}
+.cred-card:hover { box-shadow: var(--shadow); }
+.cred-logo-wrap {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.cred-logo-wrap.logo-img {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  padding: 6px;
+}
+.cred-logo-wrap.logo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.cred-initials {
+  color: var(--white);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-align: center;
+  line-height: 1.2;
+}
+.cred-info { display: flex; flex-direction: column; gap: 4px; }
+.cred-name { font-weight: 700; font-size: 0.92rem; color: var(--gray-900); line-height: 1.3; }
+.cred-body { font-size: 0.8rem; color: var(--gray-600); }
+.cred-status {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 99px;
+  width: fit-content;
+  margin-top: 2px;
+}
+.cred-status.active { background: #dcfce7; color: #15803d; }
+.cred-status.in-progress { background: #fef9c3; color: #a16207; }
+.cred-status.alumni { background: #f1f5f9; color: #64748b; }
 
 /* ===== CONTACT ===== */
 .contact-grid {
