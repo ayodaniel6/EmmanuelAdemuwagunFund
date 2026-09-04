@@ -20,6 +20,10 @@
 
   <!-- Company-specific: pricing cards & included list (not covered by shared style.css) -->
   <style>
+    /* Tighter vertical rhythm for this page (~40% less than the shared 96px) */
+    .section { padding: 58px 0; }
+    .section-header { margin-bottom: 36px; }
+
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -143,6 +147,7 @@
         <a href="#services">Services</a>
         <a href="#process">Process</a>
         <a href="#pricing">Pricing</a>
+        <a href="../#foundation" class="nav-foundation-tab">Foundation</a>
         <a href="#contact">Contact</a>
       </nav>
       <a href="#contact" class="btn btn-primary nav-cta">Book A Discovery Call</a>
@@ -158,6 +163,7 @@
     <a href="#services" class="mobile-link">Services</a>
     <a href="#process" class="mobile-link">Process</a>
     <a href="#pricing" class="mobile-link">Pricing</a>
+    <a href="../#foundation" class="mobile-link mobile-link-foundation">Foundation</a>
     <a href="#contact" class="mobile-link">Contact</a>
     <a href="#contact" class="btn btn-primary">Book A Discovery Call</a>
   </div>
@@ -165,7 +171,8 @@
   <!-- ===== HERO ===== -->
   <section class="hero" id="hero">
     <div class="hero-bg">
-      <img src="../images/emmanuel-ademuwagun-with-engineers.png" alt="Senior engineering team building software proof of concepts" class="hero-img hero-slide active" />
+      <!-- Hero image: free-licensed software/engineering photo from Unsplash (swap the URL to change it) -->
+      <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1920&q=80" alt="Software engineering — building and validating code" class="hero-img hero-slide active" />
       <div class="hero-overlay"></div>
     </div>
     <div class="container hero-content">
@@ -187,7 +194,7 @@
   <section class="about section" id="about">
     <div class="container about-grid">
       <div class="about-image-wrap">
-        <img src="../images/homepage/emmanuel-ademuwagun-head-of-engineering-arnergy.jpg" alt="Senior engineer presenting a software solution" class="about-photo" />
+        <img src="../images/emmanuel.jpg" alt="Emmanuel Ademuwagun — engineer and technology leader, founder of Jidoka Technologies" class="about-photo" />
         <div class="about-badge">
           <span class="about-badge-num">30</span>
           <span class="about-badge-label">Days Delivery</span>
@@ -427,6 +434,7 @@
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#pricing">Pricing</a>
+        <a href="../#foundation">Emmanuel Ademuwagun Foundation</a>
         <a href="#contact">Contact</a>
       </div>
       <div class="footer-col">
