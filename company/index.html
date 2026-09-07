@@ -24,6 +24,26 @@
     .section { padding: 58px 0; }
     .section-header { margin-bottom: 36px; }
 
+    .pricing-highlight {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px 20px;
+      max-width: 760px;
+      margin: 0 auto 32px;
+      padding: 18px 28px;
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      color: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+    .pricing-highlight i { color: var(--teal); font-size: 1.25rem; }
+    .pricing-highlight span { font-size: 1.02rem; }
+    .pricing-highlight strong { color: #7dd3fc; font-weight: 800; }
+    .pricing-highlight .btn { white-space: nowrap; }
+
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -314,6 +334,11 @@
         <span class="section-tag">Transparent Pricing</span>
         <h2 class="section-title">Fixed-Scope Engagements</h2>
         <p class="section-desc">Clear, milestone-based packages priced for the Canadian market — pick the scope that matches your validation goal.</p>
+      </div>
+      <div class="pricing-highlight">
+        <i class="fa fa-bolt"></i>
+        <span>Now offering <strong>Sprint-Based Pricing</strong> — get started for as low as <strong>$2,000 CAD</strong>.</span>
+        <a href="#contact" class="btn btn-primary">Start A Sprint</a>
       </div>
       <div class="pricing-grid">
 
