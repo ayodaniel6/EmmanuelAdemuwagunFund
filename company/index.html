@@ -42,7 +42,21 @@
     .pricing-highlight i { color: var(--teal); font-size: 1.25rem; }
     .pricing-highlight span { font-size: 1.02rem; }
     .pricing-highlight strong { color: #7dd3fc; font-weight: 800; }
+    .pricing-highlight .hl-amount {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #7dd3fc;
+      line-height: 1;
+      letter-spacing: -0.5px;
+      white-space: nowrap;
+    }
+    .pricing-highlight .hl-amount small { font-size: 0.95rem; font-weight: 700; opacity: 0.85; }
     .pricing-highlight .btn { white-space: nowrap; }
+
+    @media (max-width: 768px) {
+      .pricing-highlight { flex-direction: column; gap: 10px; padding: 22px 20px; }
+      .pricing-highlight .hl-amount { font-size: 2.4rem; }
+    }
 
     .pricing-grid {
       display: grid;
@@ -337,7 +351,8 @@
       </div>
       <div class="pricing-highlight">
         <i class="fa fa-bolt"></i>
-        <span>Now offering <strong>Sprint-Based Pricing</strong> — get started for as low as <strong>$2,000 CAD</strong>.</span>
+        <span>Now offering <strong>Sprint-Based Pricing</strong> — get started for as low as</span>
+        <span class="hl-amount">$2,000 <small>CAD</small></span>
         <a href="#contact" class="btn btn-primary">Start A Sprint</a>
       </div>
       <div class="pricing-grid">

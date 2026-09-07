@@ -1058,8 +1058,11 @@ a { text-decoration: none; color: inherit; }
   .about-text { border-left: none; padding-left: 0; border-top: 3px solid var(--teal); padding-top: 20px; }
 
   .programs-grid { grid-template-columns: 1fr; }
-  .stats-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; max-width: 100%; }
-  .stats-grid .stat-card { flex: 0 1 calc(50% - 8px); }
+  .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; max-width: 100%; }
+  .stats-grid .stat-card { padding: 16px 6px; min-width: 0; }
+  .stats-grid .stat-icon { width: 40px; height: 40px; font-size: 0.95rem; margin-bottom: 10px; }
+  .stats-grid .stat-num { font-size: 1.45rem; }
+  .stats-grid .stat-label { font-size: 0.7rem; line-height: 1.25; }
   .testimonials-grid { grid-template-columns: 1fr; }
   .articles-grid { grid-template-columns: 1fr; }
   .article-card.featured { grid-row: auto; }
@@ -1071,7 +1074,11 @@ a { text-decoration: none; color: inherit; }
 }
 
 @media (max-width: 480px) {
-  .stats-grid .stat-card { flex: 0 1 calc(50% - 8px); }
+  .stats-grid { gap: 6px; }
+  .stats-grid .stat-card { padding: 14px 4px; }
+  .stats-grid .stat-num { font-size: 1.2rem; }
+  .stats-grid .stat-label { font-size: 0.62rem; }
+  .stats-grid .stat-icon { width: 34px; height: 34px; font-size: 0.85rem; margin-bottom: 8px; }
   .donate-amounts { gap: 8px; }
   .amount-btn { padding: 10px 18px; font-size: 0.88rem; }
   .newsletter-form { flex-direction: column; }
