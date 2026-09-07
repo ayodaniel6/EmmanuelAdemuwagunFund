@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jidoka Technologies | Engineered Proof of Concepts</title>
-  <meta name="description" content="Jidoka Technologies builds engineered software Proof of Concepts for micro and small businesses — delivered in 30 days." />
+  <meta name="description" content="Jidoka Technologies builds engineered software Proof of Concepts for micro and small businesses — validate your idea with real users in 30 days. Fixed price, you own the code, sprints from $2,000 CAD." />
 
   <link rel="stylesheet" href="../style.css" />
   <link rel="icon" type="image/svg+xml" href="../images/ea-logo.svg" />
@@ -13,17 +13,41 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Jidoka Technologies | Engineered Proof of Concepts" />
-  <meta property="og:description" content="Engineered software Proof of Concepts for micro and small businesses. Delivered in 30 days." />
+  <meta property="og:description" content="Validate your software idea with real users in 30 days. Fixed price, full source-code ownership, sprints from $2,000 CAD." />
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- Company-specific: pricing cards & included list (not covered by shared style.css) -->
+  <!-- Company-specific styles (not covered by shared style.css) -->
   <style>
     /* Tighter vertical rhythm for this page (~40% less than the shared 96px) */
     .section { padding: 58px 0; }
     .section-header { margin-bottom: 36px; }
 
+    /* ===== HERO TRUST CHIPS ===== */
+    .trust-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 12px;
+      margin: 4px 0 32px;
+    }
+    .trust-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 15px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.24);
+      border-radius: 50px;
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 600;
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+    }
+    .trust-chip i { color: #7dd3fc; font-size: 0.9rem; }
+
+    /* ===== SPRINT PRICING HIGHLIGHT ===== */
     .pricing-highlight {
       display: flex;
       align-items: center;
@@ -32,14 +56,14 @@
       gap: 16px 20px;
       max-width: 760px;
       margin: 0 auto 32px;
-      padding: 18px 28px;
+      padding: 22px 28px;
       background: linear-gradient(135deg, var(--navy), var(--navy-light));
       color: var(--white);
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow);
       text-align: center;
     }
-    .pricing-highlight i { color: var(--teal); font-size: 1.25rem; }
+    .pricing-highlight i.hl-bolt { color: var(--teal); font-size: 1.25rem; }
     .pricing-highlight span { font-size: 1.02rem; }
     .pricing-highlight strong { color: #7dd3fc; font-weight: 800; }
     .pricing-highlight .hl-amount {
@@ -54,10 +78,11 @@
     .pricing-highlight .btn { white-space: nowrap; }
 
     @media (max-width: 768px) {
-      .pricing-highlight { flex-direction: column; gap: 10px; padding: 22px 20px; }
-      .pricing-highlight .hl-amount { font-size: 2.4rem; }
+      .pricing-highlight { flex-direction: column; gap: 12px; padding: 26px 22px; }
+      .pricing-highlight .hl-amount { font-size: 2.5rem; }
     }
 
+    /* ===== PRICING CARDS ===== */
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -156,6 +181,7 @@
       .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
     }
 
+    /* ===== INCLUDED / GUARANTEES ===== */
     .included-card {
       display: flex;
       align-items: center;
@@ -165,6 +191,68 @@
       color: var(--navy);
     }
     .included-card i { color: #16a34a; font-size: 1.1rem; flex-shrink: 0; }
+
+    /* ===== FAQ ===== */
+    .faq-list {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .faq-item {
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      background: var(--white);
+      overflow: hidden;
+      transition: border-color var(--transition);
+    }
+    .faq-item.open { border-color: var(--teal); }
+    .faq-q {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      width: 100%;
+      text-align: left;
+      padding: 18px 22px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      font-family: inherit;
+    }
+    .faq-q i {
+      color: var(--teal);
+      transition: transform var(--transition);
+      flex-shrink: 0;
+      font-size: 0.9rem;
+    }
+    .faq-item.open .faq-q i { transform: rotate(180deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.32s ease; }
+    .faq-a p { padding: 0 22px 20px; color: var(--gray-600); line-height: 1.65; font-size: 0.94rem; }
+    .faq-item.open .faq-a { max-height: 500px; }
+
+    /* ===== CLOSING CTA BAND ===== */
+    .cta-band {
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      border-radius: var(--radius-lg);
+      padding: 52px 36px;
+      text-align: center;
+      color: #fff;
+      max-width: 900px;
+      margin: 0 auto;
+      box-shadow: var(--shadow-lg);
+    }
+    .cta-band h2 { font-size: 2rem; margin-bottom: 14px; color: #fff; line-height: 1.2; }
+    .cta-band p { color: rgba(255,255,255,0.82); max-width: 560px; margin: 0 auto 28px; line-height: 1.6; }
+    .cta-band .btn { margin: 0 auto; }
+    @media (max-width: 768px) {
+      .cta-band { padding: 40px 22px; }
+      .cta-band h2 { font-size: 1.55rem; }
+    }
   </style>
 </head>
 <body>
@@ -177,12 +265,12 @@
         <span class="nav-logo-name">Jidoka Technologies</span>
       </a>
       <nav class="nav-links" id="nav-links">
-        <a href="#about">About</a>
+        <a href="#why">Why a PoC</a>
         <a href="#services">Services</a>
         <a href="#process">Process</a>
         <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
         <a href="../#foundation" class="nav-foundation-tab">Foundation</a>
-        <a href="#contact">Contact</a>
       </nav>
       <a href="#contact" class="btn btn-primary nav-cta">Book A Discovery Call</a>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -193,26 +281,31 @@
 
   <!-- ===== MOBILE MENU ===== -->
   <div class="mobile-menu" id="mobile-menu">
-    <a href="#about" class="mobile-link">About</a>
+    <a href="#why" class="mobile-link">Why a PoC</a>
     <a href="#services" class="mobile-link">Services</a>
     <a href="#process" class="mobile-link">Process</a>
     <a href="#pricing" class="mobile-link">Pricing</a>
+    <a href="#faq" class="mobile-link">FAQ</a>
     <a href="../#foundation" class="mobile-link mobile-link-foundation">Foundation</a>
-    <a href="#contact" class="mobile-link">Contact</a>
     <a href="#contact" class="btn btn-primary">Book A Discovery Call</a>
   </div>
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="hero">
     <div class="hero-bg">
-      <!-- Hero image: free-licensed software/engineering photo from Unsplash (swap the URL to change it) -->
       <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1920&q=80" alt="Software engineering — building and validating code" class="hero-img hero-slide active" />
       <div class="hero-overlay"></div>
     </div>
     <div class="container hero-content">
-      <span class="hero-badge">🇨🇦 Jidoka Technologies</span>
+      <span class="hero-badge">🇨🇦 Jidoka Technologies · Based in Canada</span>
       <h1 class="hero-title">Engineered Proof of Concepts.<br />Delivered in 30 Days.</h1>
-      <p class="hero-sub">We help micro and small businesses validate software ideas quickly through focused Proof of Concepts engineered by experienced software developers. Every solution is designed for pilot deployments and early-stage validation, typically supporting between 10 and 100 users.</p>
+      <p class="hero-sub">We help micro and small businesses turn an idea into working software your real users can try — fast. Validate before you invest in a full build, and keep every line of code you pay for.</p>
+      <div class="trust-chips">
+        <span class="trust-chip"><i class="fa fa-lock"></i> Fixed price, no surprises</span>
+        <span class="trust-chip"><i class="fa fa-code-branch"></i> You own the code</span>
+        <span class="trust-chip"><i class="fa fa-bolt"></i> 30-day delivery</span>
+        <span class="trust-chip"><i class="fa fa-flag-checkered"></i> Sprints from $2,000</span>
+      </div>
       <div class="hero-actions">
         <a href="#contact" class="btn btn-primary btn-lg">Book A Discovery Call</a>
         <a href="#pricing" class="btn btn-outline btn-lg">View Pricing</a>
@@ -220,6 +313,34 @@
       <div class="hero-scroll">
         <span>Scroll To Learn More</span>
         <i class="fa fa-chevron-down"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY A PROOF OF CONCEPT ===== -->
+  <section class="section bg-light" id="why">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why Start Here</span>
+        <h2 class="section-title">Why Build a Proof of Concept First?</h2>
+        <p class="section-desc">A full software build is expensive and slow to change. A Proof of Concept lets you prove the idea works — with real people, real data, and a real budget you control.</p>
+      </div>
+      <div class="programs-grid">
+        <div class="program-card">
+          <div class="program-icon"><i class="fa fa-shield-halved"></i></div>
+          <h3>Test Before You Invest</h3>
+          <p>Spend thousands to learn what works — not tens of thousands to find out it doesn't. Reduce risk before you commit to a bigger build.</p>
+        </div>
+        <div class="program-card">
+          <div class="program-icon"><i class="fa fa-hand-pointer"></i></div>
+          <h3>See It, Don't Imagine It</h3>
+          <p>Get a working product in weeks — something you can click, demo to your team, and put in front of customers for honest feedback.</p>
+        </div>
+        <div class="program-card">
+          <div class="program-icon"><i class="fa fa-key"></i></div>
+          <h3>Own Everything</h3>
+          <p>You keep 100% of the source code, accounts, and documentation. No lock-in, no hidden dependency on us — ever.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -235,10 +356,10 @@
         </div>
       </div>
       <div class="about-text">
-        <span class="section-tag">What We Do</span>
-        <h2 class="section-title">Focused Software Validation For Small Businesses</h2>
-        <p>At <strong>Jidoka Technologies</strong>, we build working Proof of Concepts that help businesses reduce risk before committing to larger software investments.</p>
-        <p>Whether you need to automate a workflow, validate a new service, integrate third-party systems, or test a business idea, we deliver a functional solution that allows real users to provide feedback.</p>
+        <span class="section-tag">Who You Work With</span>
+        <h2 class="section-title">Focused Software Validation, Engineer-Led</h2>
+        <p>At <strong>Jidoka Technologies</strong>, you work directly with an experienced software engineer — not a sales team handing your project to juniors. Every Proof of Concept is architected and built to a professional standard.</p>
+        <p>Whether you want to automate a manual workflow, validate a new service, integrate third-party systems, or test a business idea, we deliver a functional solution that lets real users give you feedback.</p>
         <p>We intentionally focus on small, targeted projects where speed, clarity, and engineering quality matter most.</p>
         <div class="about-pillars">
           <div class="pillar">
@@ -247,7 +368,7 @@
           </div>
           <div class="pillar">
             <i class="fa fa-user-gear"></i>
-            <span>Engineers</span>
+            <span>Engineer-Led</span>
           </div>
           <div class="pillar">
             <i class="fa fa-rocket"></i>
@@ -264,25 +385,29 @@
       <div class="section-header">
         <span class="section-tag">Capabilities</span>
         <h2 class="section-title">What We Build</h2>
-        <p class="section-desc">Practical software solutions designed to validate ideas, improve operations, and automate workflows.</p>
+        <p class="section-desc">Practical software that validates ideas, streamlines operations, and automates the work slowing your team down.</p>
       </div>
       <div class="programs-grid">
         <div class="program-card">
           <div class="program-icon"><i class="fa fa-diagram-project"></i></div>
           <h3>Workflow Automation</h3>
-          <p>Replace spreadsheets and manual processes with streamlined digital workflows.</p>
+          <p>Replace spreadsheets and manual, repetitive processes with streamlined digital workflows.</p>
         </div>
         <div class="program-card">
-          <div class="program-icon"><i class="fa fa-chart-column"></i></div>
-          <h3>Business Utilities</h3>
-          <p>Internal tools that improve operational efficiency for small teams.</p>
+          <div class="program-icon"><i class="fa fa-window-restore"></i></div>
+          <h3>Custom Web Apps</h3>
+          <p>Purpose-built tools and customer-facing apps to test a product idea with real users.</p>
         </div>
         <div class="program-card">
           <div class="program-icon"><i class="fa fa-plug"></i></div>
           <h3>API Integrations</h3>
-          <p>Connect business systems using secure, modern integrations.</p>
+          <p>Connect the business systems you already use with secure, modern integrations.</p>
         </div>
-        
+        <div class="program-card">
+          <div class="program-icon"><i class="fa fa-chart-column"></i></div>
+          <h3>Dashboards &amp; Reporting</h3>
+          <p>Turn scattered data into clear dashboards that help you make faster decisions.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -293,32 +418,33 @@
       <div class="section-header">
         <span class="section-tag">How We Work</span>
         <h2 class="section-title">A Focused 30-Day Delivery Process</h2>
+        <p class="section-desc">Clear milestones from the first call to code in your hands — so you always know exactly where your project stands.</p>
       </div>
       <div class="programs-grid">
         <div class="program-card">
           <div class="program-icon"><i class="fa fa-compass-drafting"></i></div>
-          <h3>Week 1</h3>
-          <p>Discovery, requirements, architecture, workflows and planning.</p>
+          <h3>Week 1 · Plan</h3>
+          <p>Discovery, requirements, architecture, and a clear scope you sign off on before we build.</p>
         </div>
         <div class="program-card">
           <div class="program-icon"><i class="fa fa-code"></i></div>
-          <h3>Weeks 2-3</h3>
-          <p>Development, integrations, user validation and testing.</p>
+          <h3>Weeks 2–3 · Build</h3>
+          <p>Development, integrations, and early user validation — with regular check-ins along the way.</p>
         </div>
         <div class="program-card">
           <div class="program-icon"><i class="fa fa-rocket"></i></div>
-          <h3>Week 4</h3>
-          <p>Launch, deployment, documentation and source code handoff.</p>
+          <h3>Week 4 · Launch</h3>
+          <p>Testing, deployment, documentation, and full source-code handoff. It's yours.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== IMPACT / METRICS ===== -->
+  <!-- ===== METRICS ===== -->
   <section class="section bg-light">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Key Metrics</span>
+        <span class="section-tag">The Essentials</span>
         <h2 class="section-title">Designed For Speed And Quality</h2>
       </div>
       <div class="stats-grid">
@@ -341,20 +467,41 @@
     </div>
   </section>
 
+  <!-- ===== INCLUDED / GUARANTEES ===== -->
+  <section class="section" id="included">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">No Surprises</span>
+        <h2 class="section-title">Included With Every Engagement</h2>
+        <p class="section-desc">Every project ships with the things that protect your investment — no upsells, no lock-in.</p>
+      </div>
+      <div class="programs-grid">
+        <div class="program-card included-card"><i class="fa fa-circle-check"></i> Expert-Led Architecture</div>
+        <div class="program-card included-card"><i class="fa fa-circle-check"></i> 100% Source Code Ownership</div>
+        <div class="program-card included-card"><i class="fa fa-circle-check"></i> Deployment &amp; Configuration</div>
+        <div class="program-card included-card"><i class="fa fa-circle-check"></i> QA Testing</div>
+        <div class="program-card included-card"><i class="fa fa-circle-check"></i> GitHub Handover</div>
+        <div class="program-card included-card"><i class="fa fa-circle-check"></i> Technical Documentation</div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== PRICING ===== -->
-  <section class="section" id="pricing">
+  <section class="section bg-light" id="pricing">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Transparent Pricing</span>
-        <h2 class="section-title">Fixed-Scope Engagements</h2>
-        <p class="section-desc">Clear, milestone-based packages priced for the Canadian market — pick the scope that matches your validation goal.</p>
+        <h2 class="section-title">Two Simple Ways To Start</h2>
+        <p class="section-desc">Kick off with a small, focused <strong>Sprint</strong> to test one thing quickly, or choose a fixed-scope <strong>PoC package</strong> for a complete validation. Every price is fixed and agreed before we build.</p>
       </div>
+
       <div class="pricing-highlight">
-        <i class="fa fa-bolt"></i>
-        <span>Now offering <strong>Sprint-Based Pricing</strong> — get started for as low as</span>
+        <i class="fa fa-bolt hl-bolt"></i>
+        <span>Start small with a <strong>Validation Sprint</strong> — one focused feature or automation, from</span>
         <span class="hl-amount">$2,000 <small>CAD</small></span>
         <a href="#contact" class="btn btn-primary">Start A Sprint</a>
       </div>
+
       <div class="pricing-grid">
 
         <div class="pricing-card">
@@ -401,24 +548,53 @@
         </div>
 
       </div>
-      <p class="pricing-note">All figures in Canadian dollars (CAD) and fixed-scope on a milestone-based schedule. Applicable taxes (GST/HST/PST) are additional. Source code ownership, deployment, and documentation are included with every engagement. Final quotes are confirmed after a short discovery call.</p>
+      <p class="pricing-note">All figures in Canadian dollars (CAD), fixed-scope on a milestone-based schedule. Applicable taxes (GST/HST/PST) are additional. Source code ownership, deployment, and documentation are included with every engagement. Final scope and quote are confirmed after a short discovery call.</p>
     </div>
   </section>
 
-  <!-- ===== INCLUDED ===== -->
-  <section class="section bg-light">
+  <!-- ===== FAQ ===== -->
+  <section class="section" id="faq">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Included</span>
-        <h2 class="section-title">Included With Every Project</h2>
+        <span class="section-tag">Good To Know</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
       </div>
-      <div class="programs-grid">
-        <div class="program-card included-card"><i class="fa fa-circle-check"></i> Expert-Led Architecture</div>
-        <div class="program-card included-card"><i class="fa fa-circle-check"></i> Source Code Ownership</div>
-        <div class="program-card included-card"><i class="fa fa-circle-check"></i> Deployment &amp; Configuration</div>
-        <div class="program-card included-card"><i class="fa fa-circle-check"></i> QA Testing</div>
-        <div class="program-card included-card"><i class="fa fa-circle-check"></i> GitHub Handover</div>
-        <div class="program-card included-card"><i class="fa fa-circle-check"></i> Technical Documentation</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">What exactly is a Proof of Concept? <i class="fa fa-chevron-down"></i></button>
+          <div class="faq-a"><p>It's a real, working version of your idea — focused on the parts that matter most — built quickly so you can put it in front of real users and see whether it delivers value. It's not a throwaway mockup; it's functional software you own and can build on.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Do I actually own the code? <i class="fa fa-chevron-down"></i></button>
+          <div class="faq-a"><p>Yes — 100%. At handover you receive the full source code (via GitHub), all accounts and configuration, and technical documentation. There's no lock-in and no dependency on us to keep it running.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">How does pricing and payment work? <i class="fa fa-chevron-down"></i></button>
+          <div class="faq-a"><p>Pricing is fixed and agreed before any work starts, so there are no surprise invoices. Sprints start at $2,000 CAD for a single focused feature or automation; full PoC packages are milestone-based. We confirm the exact scope and price on a short discovery call.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What happens after the 30 days? <i class="fa fa-chevron-down"></i></button>
+          <div class="faq-a"><p>You get everything handed over and it's fully yours. If the pilot goes well and you want to expand it, we can scope a follow-on engagement — but you're never obligated. The code is written to a professional standard so any engineer can pick it up.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Who will actually build my project? <i class="fa fa-chevron-down"></i></button>
+          <div class="faq-a"><p>You work directly with an experienced software engineer from discovery through handoff — not a sales rep who disappears once the contract is signed. That's how we keep quality high and timelines short.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Do you work with businesses outside Canada? <i class="fa fa-chevron-down"></i></button>
+          <div class="faq-a"><p>We're based in Victoria, BC and work remotely with clients wherever they are. Pricing is quoted in CAD, and we'll agree on a communication rhythm that fits your time zone.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CLOSING CTA ===== -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="cta-band">
+        <h2>Have an idea worth testing?</h2>
+        <p>Book a free discovery call. We'll talk through your idea, agree on a fixed scope and price, and — if it's a fit — deliver a working Proof of Concept in 30 days.</p>
+        <a href="#contact" class="btn btn-primary btn-lg">Book A Discovery Call</a>
       </div>
     </div>
   </section>
@@ -429,7 +605,7 @@
       <div class="contact-info">
         <span class="section-tag">Get In Touch</span>
         <h2 class="section-title">Let's Talk</h2>
-        <p>Whether you're exploring a collaboration, a partnership in Cleantech or AI, or simply want to connect — I'd love to hear from you.</p>
+        <p>Tell us about the idea you want to test or the workflow you want to improve. We read every message and reply within one business day.</p>
         <div class="contact-details">
           <div class="contact-item">
             <i class="fa fa-envelope"></i>
@@ -454,8 +630,8 @@
           <input type="text" name="name" placeholder="Your name" class="form-input" required />
           <input type="email" name="email" placeholder="Email address" class="form-input" required />
         </div>
-        <input type="text" name="subject_line" placeholder="Subject" class="form-input" />
-        <textarea name="message" placeholder="Your message..." class="form-input form-textarea" rows="5" maxlength="499" required></textarea>
+        <input type="text" name="subject_line" placeholder="What would you like to build?" class="form-input" />
+        <textarea name="message" placeholder="Tell us about your idea..." class="form-input form-textarea" rows="5" maxlength="499" required></textarea>
         <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
         <p class="form-status" id="form-status"></p>
       </form>
@@ -471,9 +647,10 @@
       </div>
       <div class="footer-col">
         <h4>Company</h4>
-        <a href="#about">About</a>
+        <a href="#why">Why a PoC</a>
         <a href="#services">Services</a>
         <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
         <a href="../#foundation">Emmanuel Ademuwagun Foundation</a>
         <a href="#contact">Contact</a>
       </div>
@@ -500,5 +677,13 @@
   </footer>
 
   <script src="../script.js"></script>
+  <!-- FAQ accordion -->
+  <script>
+    document.querySelectorAll('.faq-q').forEach(function (q) {
+      q.addEventListener('click', function () {
+        q.closest('.faq-item').classList.toggle('open');
+      });
+    });
+  </script>
 </body>
 </html>
