@@ -628,6 +628,85 @@ a { text-decoration: none; color: inherit; }
   .fund-card { padding: 18px 16px; }
 }
 
+/* ===== BENEFICIARIES ===== */
+.beneficiaries {
+  margin-bottom: 48px;
+}
+.beneficiaries-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 22px;
+  text-align: center;
+}
+.beneficiary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+.beneficiary-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  backdrop-filter: blur(8px);
+  transition: all var(--transition);
+}
+.beneficiary-card:hover {
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+.beneficiary-avatar {
+  width: 54px; height: 54px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(14,165,233,0.25);
+  color: #7dd3fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+.beneficiary-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+  min-width: 0;
+}
+.beneficiary-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+}
+.beneficiary-school,
+.beneficiary-location {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.beneficiary-school i,
+.beneficiary-location i { color: var(--teal); width: 14px; text-align: center; }
+.beneficiary-amount {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #7dd3fc;
+  flex-shrink: 0;
+}
+@media (max-width: 600px) {
+  .beneficiary-card { flex-direction: column; text-align: center; }
+  .beneficiary-info { align-items: center; }
+  .beneficiary-school,
+  .beneficiary-location { justify-content: center; }
+}
+
 /* ===== PROGRAMS ===== */
 .programs-grid {
   display: grid;
