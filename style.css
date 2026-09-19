@@ -555,6 +555,79 @@ a { text-decoration: none; color: inherit; }
   .commitment-banner { flex-direction: column; text-align: center; padding: 24px; }
 }
 
+/* ===== FUND AT A GLANCE ===== */
+.fund-tracker {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius-lg);
+  padding: 32px 36px;
+  margin-bottom: 48px;
+  backdrop-filter: blur(8px);
+}
+.fund-tracker-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 22px;
+  text-align: center;
+}
+.fund-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 26px;
+}
+.fund-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  padding: 22px 20px;
+  text-align: center;
+}
+.fund-card-label {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.75);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.fund-card-value {
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1;
+}
+.fund-card-used .fund-card-value { color: #fcd34d; }
+.fund-card-left { border-color: rgba(14,165,233,0.5); }
+.fund-card-left .fund-card-value { color: #7dd3fc; }
+.fund-bar {
+  height: 12px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.fund-bar-fill {
+  height: 100%;
+  width: 14.3%;
+  background: linear-gradient(90deg, var(--teal), #7dd3fc);
+  border-radius: 999px;
+}
+.fund-bar-note {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.8);
+  text-align: center;
+  margin-top: 16px;
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .fund-tracker { padding: 26px 20px; }
+  .fund-cards { grid-template-columns: 1fr; gap: 12px; }
+  .fund-card { padding: 18px 16px; }
+}
+
 /* ===== PROGRAMS ===== */
 .programs-grid {
   display: grid;
