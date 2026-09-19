@@ -39,7 +39,7 @@ mobileMenu.querySelectorAll('a').forEach(link => {
 // ===== COUNTER ANIMATION =====
 function animateCounter(el) {
   const target = parseInt(el.dataset.target);
-  const suffix = el.dataset.suffix || '+';
+  const suffix = el.dataset.suffix !== undefined ? el.dataset.suffix : '+';
   const duration = 1800;
   const step = target / (duration / 16);
   let current = 0;
