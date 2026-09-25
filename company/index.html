@@ -47,6 +47,44 @@
     }
     .trust-chip i { color: #7dd3fc; font-size: 0.9rem; }
 
+    /* ===== APPS WE'VE BUILT ===== */
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .app-card {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 24px;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      transition: all var(--transition);
+    }
+    .app-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--teal);
+    }
+    .app-logo {
+      flex-shrink: 0;
+      width: 88px;
+      height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gray-50);
+      border-radius: var(--radius);
+      padding: 10px;
+    }
+    .app-logo img { width: 100%; height: 100%; object-fit: contain; }
+    .app-body h3 { font-size: 1.2rem; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
+    .app-body p { color: var(--gray-600); font-size: 0.95rem; margin-bottom: 10px; }
+    .app-link { color: var(--teal); font-size: 0.85rem; font-weight: 600; }
+    .app-link i { font-size: 0.75rem; margin-left: 4px; }
+
     /* ===== SPRINT PRICING HIGHLIGHT ===== */
     .pricing-highlight {
       display: flex;
@@ -267,6 +305,7 @@
       <nav class="nav-links" id="nav-links">
         <a href="#why">Why a PoC</a>
         <a href="#services">Services</a>
+        <a href="#apps">Apps</a>
         <a href="#process">Process</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
@@ -283,6 +322,7 @@
   <div class="mobile-menu" id="mobile-menu">
     <a href="#why" class="mobile-link">Why a PoC</a>
     <a href="#services" class="mobile-link">Services</a>
+    <a href="#apps" class="mobile-link">Apps</a>
     <a href="#process" class="mobile-link">Process</a>
     <a href="#pricing" class="mobile-link">Pricing</a>
     <a href="#faq" class="mobile-link">FAQ</a>
@@ -409,6 +449,29 @@
           <h3>Dashboards &amp; Reporting</h3>
           <p>Turn scattered data into clear dashboards that help you make faster decisions.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== APPS WE'VE BUILT ===== -->
+  <section class="section" id="apps">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Work</span>
+        <h2 class="section-title">Apps We've Built</h2>
+        <p class="section-desc">Live products built and launched by Jidoka Technologies.</p>
+      </div>
+      <div class="apps-grid">
+        <a href="https://bladdersense.com" class="app-card" target="_blank" rel="noopener">
+          <div class="app-logo">
+            <img src="../images/apps/bladdersense-logo.png" alt="BladderSense logo" />
+          </div>
+          <div class="app-body">
+            <h3>BladderSense</h3>
+            <p>Men's Private Bladder Health Guide</p>
+            <span class="app-link">Visit bladdersense.com <i class="fa fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -650,6 +713,7 @@
         <h4>Company</h4>
         <a href="#why">Why a PoC</a>
         <a href="#services">Services</a>
+        <a href="#apps">Apps</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
         <a href="../#foundation">Emmanuel Ademuwagun Foundation</a>
