@@ -55,12 +55,11 @@
     }
     .app-card {
       display: flex;
-      align-items: center;
-      gap: 20px;
-      padding: 24px;
+      flex-direction: column;
       background: var(--white);
       border: 1px solid var(--gray-200);
       border-radius: var(--radius-lg);
+      overflow: hidden;
       transition: all var(--transition);
     }
     .app-card:hover {
@@ -69,17 +68,12 @@
       border-color: var(--teal);
     }
     .app-logo {
-      flex-shrink: 0;
-      width: 88px;
-      height: 88px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--gray-50);
-      border-radius: var(--radius);
-      padding: 10px;
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 20px 24px;
     }
-    .app-logo img { width: 100%; height: 100%; object-fit: contain; }
+    .app-logo img { width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: contain; }
+    .app-body { padding: 20px 24px 24px; }
     .app-body h3 { font-size: 1.2rem; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
     .app-body p { color: var(--gray-600); font-size: 0.95rem; margin-bottom: 10px; }
     .app-link { color: var(--teal); font-size: 0.85rem; font-weight: 600; }
@@ -464,7 +458,7 @@
       <div class="apps-grid">
         <a href="https://bladdersense.com" class="app-card" target="_blank" rel="noopener">
           <div class="app-logo">
-            <img src="https://bladdersense.com/homepage-logo.png" alt="BladderSense logo" />
+            <img src="../images/apps/bladdersense-logo.webp" alt="BladderSense — Better Days. Better Nights." width="1151" height="577" loading="lazy" />
           </div>
           <div class="app-body">
             <h3>BladderSense</h3>
