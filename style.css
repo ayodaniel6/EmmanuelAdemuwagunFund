@@ -674,6 +674,15 @@ a { text-decoration: none; color: inherit; }
   justify-content: center;
   font-size: 1.3rem;
 }
+.beneficiary-avatar.charity-logo {
+  width: 64px; height: 64px;
+  background: #ffffff;
+  padding: 8px;
+}
+.beneficiary-avatar.charity-logo img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+}
 .beneficiary-info {
   display: flex;
   flex-direction: column;
