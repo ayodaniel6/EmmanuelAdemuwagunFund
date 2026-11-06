@@ -774,6 +774,7 @@ a { text-decoration: none; color: inherit; }
   margin: 0 auto;
   margin-top: 40px;
 }
+.stats-grid.stats-4 { grid-template-columns: repeat(4, 1fr); max-width: 960px; }
 .stat-card {
   background: var(--white);
   border: 1px solid var(--gray-200);
@@ -1229,6 +1230,7 @@ a { text-decoration: none; color: inherit; }
 
   .programs-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; max-width: 100%; }
+  .stats-grid.stats-4 { grid-template-columns: repeat(4, 1fr); }
   .stats-grid .stat-card { padding: 16px 6px; min-width: 0; }
   .stats-grid .stat-icon { width: 40px; height: 40px; font-size: 0.95rem; margin-bottom: 10px; }
   .stats-grid .stat-num { font-size: 1.45rem; }
