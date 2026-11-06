@@ -677,8 +677,9 @@ a { text-decoration: none; color: inherit; }
 .other-charity .beneficiary-cards { grid-template-columns: 1fr; }
 .beneficiary-avatar.charity-logo {
   width: 64px; height: 64px;
-  background: #ffffff;
-  padding: 8px;
+  background: none;
+  border-radius: 0;
+  padding: 0;
 }
 .beneficiary-avatar.charity-logo img {
   width: 100%; height: 100%;
