@@ -1270,3 +1270,10 @@ a { text-decoration: none; color: inherit; }
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Home page: Credentials and Contact sit next to each other, so give
+   Contact a white background and a divider to separate them. */
+.contact.contact-split {
+  background: var(--white);
+  border-top: 1px solid var(--gray-200);
+}
