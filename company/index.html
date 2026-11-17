@@ -7,7 +7,7 @@
   <title>Jidoka Technologies | AI-Powered Proof of Concepts</title>
   <meta name="description" content="Jidoka Technologies builds AI-powered software Proof of Concepts for micro and small businesses — validate your idea with real users in 30 days. Fixed price, you own the code, sprints from $2,000 CAD." />
 
-  <link rel="stylesheet" href="../style.css?v=20261119" />
+  <link rel="stylesheet" href="../style.css?v=20261120" />
   <link rel="icon" type="image/svg+xml" href="../images/ea-logo.svg" />
 
   <!-- Open Graph -->
@@ -286,6 +286,13 @@
       .cta-band h2 { font-size: 1.55rem; }
     }
   </style>
+  <!-- Start the hero photo download straight away -->
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1600&q=70" fetchpriority="high" />
+  <!-- Pre-load site pages when a visitor hovers or taps a link, so moving between pages feels instant -->
+  <script type="speculationrules">
+  {"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*\\?*"}}]},"eagerness":"moderate"}]}
+  </script>
 </head>
 <body>
 
@@ -303,7 +310,7 @@
         <a href="#process">Process</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
-        <a href="../foundation/" class="nav-foundation-tab">Foundation</a>
+        <a href="../foundation/">Foundation</a>
       </nav>
       <a href="#contact" class="btn btn-primary nav-cta">Book A Discovery Call</a>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -320,14 +327,14 @@
     <a href="#process" class="mobile-link">Process</a>
     <a href="#pricing" class="mobile-link">Pricing</a>
     <a href="#faq" class="mobile-link">FAQ</a>
-    <a href="../foundation/" class="mobile-link mobile-link-foundation">Foundation</a>
+    <a href="../foundation/" class="mobile-link">Foundation</a>
     <a href="#contact" class="btn btn-primary">Book A Discovery Call</a>
   </div>
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="hero">
     <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1920&q=80" alt="AI-powered software development — building and validating code" class="hero-img hero-slide active" />
+      <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1600&q=70" fetchpriority="high" alt="AI-powered software development — building and validating code" class="hero-img hero-slide active" />
       <div class="hero-overlay"></div>
     </div>
     <div class="container hero-content">
@@ -728,7 +735,7 @@
     </div>
   </footer>
 
-  <script src="../script.js?v=20261119"></script>
+  <script src="../script.js?v=20261120"></script>
   <!-- FAQ accordion -->
   <script>
     document.querySelectorAll('.faq-q').forEach(function (q) {
